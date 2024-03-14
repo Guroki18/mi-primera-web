@@ -1,0 +1,233 @@
+
+/*para quitar el punto de las listas*/
+
+ul,ol{
+    list-style: none;
+    }
+
+/*para quitar el color del vinculo del link*/
+a{
+    text-decoration: none;
+}
+
+/*Encabezado*/
+header{
+    font-family: "madimi one", sans-serif;
+    display: flex;
+    background-color: rgba(40, 72, 128);
+    align-items:baseline;
+    justify-content: space-between;
+    position: flex;
+}
+#check{
+    display: none;
+}
+
+.checkbtn{
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+header nav ul {
+    color: black;
+    display: flex;
+    /*gap para separar los espacios de las cajas*/
+    gap: 20px;
+    width: 400px;
+}
+
+header a {
+    color: black;
+    width: auto;
+    
+}
+
+header i{
+    color: black;
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+/*Cuerpo*/
+body   {
+    margin: 0%;
+    padding: 0%;
+}
+
+.seccion-1{
+    font-family: "playfair display", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(199, 210, 228, 0.822)
+        
+}
+.acerca-de{
+    width: 500px;
+    border-radius: 30px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.acerca-imagen{
+    img{
+        border-radius: 30px;
+    }
+}
+.acerca-de-mi{
+    font-family: "Caveat", cursive;
+    font-weight:bold
+}
+
+main section h9 { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galeria-fotos{
+    display: flex;
+    background-color: rgba(224, 229, 237, 0.822);
+    justify-content: space-around;
+    
+}
+
+.caja1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    img {
+        border-radius: 30px;
+    }
+    margin-left: 20px;
+    
+}
+
+.caja2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    img {
+        border-radius: 30px;
+    }
+    
+}
+
+.caja3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    img {
+        border-radius: 30px;
+    }
+}
+
+
+/* Pie de pagina*/
+
+.pie-pagina {
+    background-color: rgb(66, 88, 128);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+footer nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    gap: 25px;
+}
+
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+/* Termina encabezado empieza cuerpo */
+
+   
+    .seccion-1{
+        display: flex;
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(245, 245, 220, 0.582);
+    }
+    .galeria-fotos{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(246, 240, 255);
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .pie-pagina {
+        background-color: rgb(191, 230, 221);
+        height: 50px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+    
+/* Menú */
+    .checkbtn{
+        display: block;
+    }
+    #encabezado{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: static;
+        width: 100%;
+        height: 50px;
+    }
+    #encabezado ul {
+        position: absolute;
+        width: 100%;
+        height: 30vh;
+        background-color: rgb(184, 161, 140);
+        text-align: center;
+
+        top: 34px;
+        left: 100%;
+        transition: all 0.5s;
+    }
+
+    #check:checked ~ ul {
+        left: 0%;
+        display: block;
+    }
+
+    #encabezado nav ul li {
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+    
+    #encabezado nav ul li a {
+        font-size: 20px;
+    }
+
+    #check:checked ~ .checkbtn {
+        color: rgb(184, 117, 117);}
+    }
+
+    /* Activar el menu de contenido de JAVA*/
+    
+    .navbar.active {
+        height: 100vh;
+    }
+
+    .navbar.active ul.menu {
+        opacity: 1;
+    }
